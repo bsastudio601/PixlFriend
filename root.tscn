@@ -1,0 +1,272 @@
+[gd_scene format=3 uid="uid://bhaqrtakskf1y"]
+
+[ext_resource type="Script" uid="uid://ckleodg3x7ri7" path="res://character.gd" id="1_bf3um"]
+[ext_resource type="Texture2D" uid="uid://dfvlt47x1r01w" path="res://sprite/hridi_still_default.png" id="1_vyht1"]
+[ext_resource type="Texture2D" uid="uid://df2kq26dfvr32" path="res://sprite/hridi_idle_1.png" id="2_bf3um"]
+[ext_resource type="Texture2D" uid="uid://bfigrl3qtaxav" path="res://sprite/effect_star_in.png" id="2_qw60f"]
+[ext_resource type="Shader" uid="uid://c68ydqukp2s3y" path="res://root2.gdshader" id="2_tw3kd"]
+[ext_resource type="Texture2D" uid="uid://cvfbqlinn0uin" path="res://sprite/effect_star_out.png" id="3_eji0w"]
+[ext_resource type="Texture2D" uid="uid://brxkssv6hkm8s" path="res://sprite/hridi_eye_annoyed.png" id="3_huihk"]
+[ext_resource type="Texture2D" uid="uid://byb3dhlfq7q76" path="res://sprite/effect_zzz.png" id="4_qwhpj"]
+[ext_resource type="Texture2D" uid="uid://8il14pupb2ho" path="res://sprite/hridi_eye_happy.png" id="4_tw3kd"]
+[ext_resource type="Texture2D" uid="uid://cp7d7urjxk8r8" path="res://sprite/hridi_eye_normal_blink.png" id="5_gd4vy"]
+[ext_resource type="Texture2D" uid="uid://cdir304cnrw4s" path="res://sprite/hridi_eye_inawe.png" id="6_qw60f"]
+[ext_resource type="Texture2D" uid="uid://c62cv4v55x328" path="res://sprite/hridi_eye_sleepy.png" id="7_eji0w"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_82tj2"]
+shader = ExtResource("2_tw3kd")
+shader_parameter/scanline_strength = 0.090000004275
+shader_parameter/scanline_density = 140.00000427499998
+shader_parameter/flicker_strength = 0.01999999955297
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qwhpj"]
+atlas = ExtResource("1_vyht1")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qt76e"]
+atlas = ExtResource("2_bf3um")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_oemp8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qwhpj")
+}],
+"loop": 1,
+"name": &"idle_1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qt76e")
+}],
+"loop": 1,
+"name": &"idle_2",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_50g4q"]
+atlas = ExtResource("3_huihk")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bf3um"]
+atlas = ExtResource("5_gd4vy")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vte5o"]
+atlas = ExtResource("4_tw3kd")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ab83r"]
+atlas = ExtResource("6_qw60f")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ub8w1"]
+atlas = ExtResource("5_gd4vy")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0dnjj"]
+atlas = ExtResource("7_eji0w")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_b30ca"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_50g4q")
+}],
+"loop": 1,
+"name": &"eye_annoyed",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bf3um")
+}],
+"loop": 1,
+"name": &"eye_close",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vte5o")
+}],
+"loop": 1,
+"name": &"eye_happy",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ab83r")
+}],
+"loop": 1,
+"name": &"eye_inawe",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ub8w1")
+}],
+"loop": 1,
+"name": &"eye_open",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0dnjj")
+}],
+"loop": 1,
+"name": &"eye_sleepy",
+"speed": 5.0
+}]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qt76e"]
+shader = ExtResource("2_tw3kd")
+shader_parameter/scanline_strength = 0.090000004275
+shader_parameter/scanline_density = 140.00000427499998
+shader_parameter/flicker_strength = 0.01999999955297
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sq7yr"]
+atlas = ExtResource("2_qw60f")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r3r3k"]
+atlas = ExtResource("2_qw60f")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_blcw0"]
+atlas = ExtResource("2_qw60f")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3dlgs"]
+atlas = ExtResource("3_eji0w")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_po8fv"]
+atlas = ExtResource("3_eji0w")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ynlg5"]
+atlas = ExtResource("3_eji0w")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_t4kkl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sq7yr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r3r3k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_blcw0")
+}],
+"loop": 1,
+"name": &"star_fade_in",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3dlgs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_po8fv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ynlg5")
+}],
+"loop": 1,
+"name": &"star_fade_out",
+"speed": 5.0
+}]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_sq7yr"]
+shader = ExtResource("2_tw3kd")
+shader_parameter/scanline_strength = 0.090000004275
+shader_parameter/scanline_density = 140.00000427499998
+shader_parameter/flicker_strength = 0.01999999955297
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1xb4a"]
+atlas = ExtResource("4_qwhpj")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uwexw"]
+atlas = ExtResource("4_qwhpj")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8pgb7"]
+atlas = ExtResource("4_qwhpj")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tilu5"]
+atlas = ExtResource("4_qwhpj")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tpifi"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1xb4a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uwexw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8pgb7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tilu5")
+}],
+"loop": 1,
+"name": &"zzz",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_t4kkl"]
+radius = 8.0
+height = 26.0
+
+[node name="root" type="Node2D" unique_id=646288848]
+
+[node name="Character" type="Node2D" parent="." unique_id=1476662607]
+position = Vector2(48, 48)
+scale = Vector2(3, 3)
+script = ExtResource("1_bf3um")
+
+[node name="body" type="AnimatedSprite2D" parent="Character" unique_id=1006289771]
+material = SubResource("ShaderMaterial_82tj2")
+position = Vector2(9, 15)
+sprite_frames = SubResource("SpriteFrames_oemp8")
+animation = &"idle_1"
+
+[node name="eyes" type="AnimatedSprite2D" parent="Character" unique_id=805821329]
+position = Vector2(9, 15)
+sprite_frames = SubResource("SpriteFrames_b30ca")
+animation = &"eye_open"
+
+[node name="effects" type="Node2D" parent="Character" unique_id=868680490]
+
+[node name="star" type="AnimatedSprite2D" parent="Character/effects" unique_id=891492231]
+material = SubResource("ShaderMaterial_qt76e")
+position = Vector2(8.666667, 9)
+sprite_frames = SubResource("SpriteFrames_t4kkl")
+animation = &"star_fade_out"
+
+[node name="zzz" type="AnimatedSprite2D" parent="Character/effects" unique_id=211183213]
+material = SubResource("ShaderMaterial_sq7yr")
+position = Vector2(8, -5.666667)
+sprite_frames = SubResource("SpriteFrames_tpifi")
+animation = &"zzz"
+frame = 3
+frame_progress = 0.41503918
+
+[node name="Area2D" type="Area2D" parent="Character" unique_id=1458796478]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Character/Area2D" unique_id=1669389841]
+shape = SubResource("CapsuleShape2D_t4kkl")
+
+[node name="Blink_Timer" type="Timer" parent="Character" unique_id=1089224973]
+
+[connection signal="timeout" from="Character/Blink_Timer" to="Character" method="_on_blink_timer_timeout"]
