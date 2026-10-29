@@ -13,7 +13,6 @@ config_version=5
 config/name="PixelFriend"
 run/main_scene="res://root.tscn"
 config/features=PackedStringArray("4.7", "Mobile")
-config/icon="res://icon.svg"
 
 [display]
 
